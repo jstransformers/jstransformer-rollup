@@ -1,7 +1,7 @@
 {
-  "name": "jstransformer-foo",
+  "name": "jstransformer-rollup",
   "version": "0.0.0",
-  "description": "Foo support for JSTransformers.",
+  "description": "Rollup support for JSTransformers.",
   "keywords": [
     "jstransformer"
   ],
@@ -22,11 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jstransformers/jstransformer-foo.git"
+    "url": "https://github.com/jstransformers/jstransformer-rollup.git"
   },
   "author": {
     "name": "JSTransformers Team",
     "url": "http://github.com/orgs/jstransformers/people"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^0.39.2"
+  }
 }
