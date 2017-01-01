@@ -9,6 +9,19 @@ exports.outputFormat = 'js'
 exports.renderFileAsync = function (filename, options) {
   options = options || {}
   options.entry = filename
+  if (options.plugins) {
+    if (!Array.isArray(options.plugins)) {
+      var newPlugins = []
+      for (var plugin in options.plugins) {
+        if ({}.hasOwnProperty.call(options.plugins, plugin)) {
+          var pluginOptions = options.plugins[plugin]
+          // eslint-disable-next-line import/no-dynamic-require
+          newPlugins.push(require(plugin)(pluginOptions))
+        }
+      }
+      options.plugins = newPlugins
+    }
+  }
   return new Promise(function (resolve, reject) {
     rollup.rollup(options)
       .then(function (bundle) {

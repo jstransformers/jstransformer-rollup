@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-rollup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Rollup support for JSTransformers.",
   "keywords": [
     "jstransformer"
@@ -9,6 +9,7 @@
     "index.js"
   ],
   "devDependencies": {
+    "rollup-plugin-commonjs": "^7.0.0",
     "test-jstransformer": "^1.0.0",
     "xo": "^0.17.1"
   },

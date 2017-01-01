@@ -1,0 +1,5 @@
+{
+  "plugins": {
+    "rollup-plugin-commonjs": {} 
+  }
+}
