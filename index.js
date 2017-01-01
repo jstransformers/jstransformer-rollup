@@ -11,10 +11,10 @@ exports.renderFileAsync = function (filename, options) {
   options.entry = filename
   if (options.plugins) {
     if (!Array.isArray(options.plugins)) {
-      var newPlugins = []
-      for (var plugin in options.plugins) {
+      let newPlugins = []
+      for (let plugin in options.plugins) {
         if ({}.hasOwnProperty.call(options.plugins, plugin)) {
-          var pluginOptions = options.plugins[plugin]
+          let pluginOptions = options.plugins[plugin]
           // eslint-disable-next-line import/no-dynamic-require
           newPlugins.push(require(plugin)(pluginOptions))
         }
