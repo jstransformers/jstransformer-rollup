@@ -1,21 +1,9 @@
 'use strict'
 
-var rollup = require('rollup')
+exports.name = 'foo'
+exports.inputFormats = ['foo', 'foobar']
+exports.outputFormat = 'html'
 
-exports.name = 'rollup'
-exports.inputFormats = ['js']
-exports.outputFormat = 'js'
-
-exports.renderFileAsync = function (filename, options) {
-  options = options || {}
-  options.rollup = options.rollup || {}
-  options.generate = options.generate || {}
-  options.rollup.entry = filename
-  return new Promise(function (resolve) {
-    rollup.rollup(options.rollup)
-      .then(function (bundle) {
-        var result = bundle.generate(options.generate)
-        resolve(result.code)
-      })
-  })
+exports.render = function (str) {
+  return str
 }
