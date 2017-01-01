@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-rollup",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Rollup support for JSTransformers.",
   "keywords": [
     "jstransformer"

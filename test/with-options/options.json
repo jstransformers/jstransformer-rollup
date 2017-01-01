@@ -1,8 +1,4 @@
 {
-  "rollup": {
-    "treeshake": false
-  },
-  "generate": {
-    "format": "cjs"
-  }
+  "treeshake": false,
+  "format": "cjs"
 }

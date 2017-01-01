@@ -8,13 +8,11 @@ exports.outputFormat = 'js'
 
 exports.renderFileAsync = function (filename, options) {
   options = options || {}
-  options.rollup = options.rollup || {}
-  options.generate = options.generate || {}
-  options.rollup.entry = filename
+  options.entry = filename
   return new Promise(function (resolve, reject) {
-    rollup.rollup(options.rollup)
+    rollup.rollup(options)
       .then(function (bundle) {
-        var result = bundle.generate(options.generate)
+        var result = bundle.generate(options)
         resolve(result.code)
       }).catch(function (err) {
         reject(err)

@@ -31,14 +31,8 @@ export default function foo() {
 var rollup = require('jstransformer')(require('jstransformer-rollup'));
 
 rollup.renderFileAsync('index.js', {
-  rollup: {
-    // options here passed to rollup.rollup
-    // https://github.com/rollup/rollup/wiki/JavaScript-API#rolluprollup-options-
-  },
-  generate: {
-    // options here passed to bundle.generate
-    // https://github.com/rollup/rollup/wiki/JavaScript-API#bundlegenerate-options-
-  }
+  // options here passed to rollup.rollup and bundle.generate
+  // https://github.com/rollup/rollup/wiki/JavaScript-API
 }).body
 //=> 'function foo() {\n  console.log('hi')\n}\nfoo()'
 ```
