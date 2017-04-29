@@ -1,5 +1,7 @@
 # jstransformer-rollup
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-rollup.svg)](https://greenkeeper.io/)
+
 [Rollup](https://github.com/rollup/rollup) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-rollup/master.svg)](https://travis-ci.org/jstransformers/jstransformer-rollup)
