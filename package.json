@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "rollup": "^0.39.2"
+  },
   "name": "jstransformer-rollup",
   "version": "1.1.0",
   "description": "Rollup support for JSTransformers.",
@@ -11,7 +14,7 @@
   "devDependencies": {
     "rollup-plugin-commonjs": "^7.0.0",
     "test-jstransformer": "^1.0.0",
-    "xo": "^0.17.1"
+    "xo": "*"
   },
   "scripts": {
     "coverage": "test-jstransformer coverage",
@@ -29,8 +32,5 @@
     "name": "JSTransformers Team",
     "url": "http://github.com/orgs/jstransformers/people"
   },
-  "license": "MIT",
-  "dependencies": {
-    "rollup": "^0.39.2"
-  }
+  "license": "MIT"
 }
