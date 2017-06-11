@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "rollup": "^0.39.2"
+    "rollup": "^0.42.0"
   },
   "name": "jstransformer-rollup",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Rollup support for JSTransformers.",
   "keywords": [
     "jstransformer"
@@ -12,7 +12,7 @@
     "index.js"
   ],
   "devDependencies": {
-    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-commonjs": "^8.0.2",
     "test-jstransformer": "^1.0.0",
     "xo": "*"
   },
