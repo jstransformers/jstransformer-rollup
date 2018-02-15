@@ -29,7 +29,7 @@ export default function rollup() {
 
 
 ```js
-var rollup = require('jstransformer')(require('jstransformer-rollup'));
+var rollup = require('jstransformer')(require('jstransformer-rollup'))
 
 rollup.renderFileAsync('index.js', {
   // options here passed to rollup.rollup and bundle.generate
