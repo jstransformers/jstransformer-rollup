@@ -1,6 +1,6 @@
 'use strict'
 
-var rollup = require('rollup')
+const rollup = require('rollup')
 
 exports.name = 'rollup'
 exports.inputFormats = ['js']
@@ -11,10 +11,10 @@ exports.renderFileAsync = function (filename, options) {
   options.entry = filename
   if (options.plugins) {
     if (!Array.isArray(options.plugins)) {
-      let newPlugins = []
-      for (let plugin in options.plugins) {
+      const newPlugins = []
+      for (const plugin in options.plugins) {
         if ({}.hasOwnProperty.call(options.plugins, plugin)) {
-          let pluginOptions = options.plugins[plugin]
+          const pluginOptions = options.plugins[plugin]
           // eslint-disable-next-line import/no-dynamic-require
           newPlugins.push(require(plugin)(pluginOptions))
         }
@@ -22,12 +22,12 @@ exports.renderFileAsync = function (filename, options) {
       options.plugins = newPlugins
     }
   }
-  return new Promise(function (resolve, reject) {
+  return new Promise((resolve, reject) => {
     rollup.rollup(options)
-      .then(function (bundle) {
-        var result = bundle.generate(options)
+      .then(bundle => {
+        const result = bundle.generate(options)
         resolve(result.code)
-      }).catch(function (err) {
+      }).catch(err => {
         reject(err)
       })
   })

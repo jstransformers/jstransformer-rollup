@@ -16,26 +16,26 @@
 
 `index.js`
 ```js
-import foo from './other-file'
-foo()
+import rollup from './other-file'
+rollup()
 ```
 
 `other-file.js`
 ```js
-export default function foo() {
+export default function rollup() {
   console.log('hi')
 }
 ```
 
 
 ```js
-var rollup = require('jstransformer')(require('jstransformer-rollup'));
+var rollup = require('jstransformer')(require('jstransformer-rollup'))
 
 rollup.renderFileAsync('index.js', {
   // options here passed to rollup.rollup and bundle.generate
   // https://github.com/rollup/rollup/wiki/JavaScript-API
 }).body
-//=> 'function foo() {\n  console.log('hi')\n}\nfoo()'
+//=> 'function rollup() {\n  console.log('hi')\n}\nrollup()'
 ```
 
 ## License
