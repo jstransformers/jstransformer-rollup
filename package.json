@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "rollup": "^0.66.0"
+    "rollup": "^1.1.0"
   },
   "name": "jstransformer-rollup",
   "version": "2.0.0",
